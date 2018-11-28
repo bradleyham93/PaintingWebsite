@@ -1,0 +1,395 @@
+/*  base /////////*/
+
+:root {
+  --shadow: #141e30;
+  --midtone: #243b55;
+  --highlight: #c19f57;
+  --buttonColor: #fff;
+  --footer: #0a1222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Lato;
+}
+
+p {
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/*  base /////////*/
+
+/*    logo  ///// */
+.logo {
+  height: 5rem;
+  width: 5rem;
+  background-image: url("logo.png");
+  z-index: 20000;
+  background-size: cover;
+  display: inline-block;
+  transform: translateY(40%);
+}
+
+.logo__sidebar {
+  position: absolute;
+  top: -2rem;
+  left: -1.5rem;
+}
+
+.hero__logo {
+  margin-left: -7rem;
+  height: 8rem;
+  width: 8rem;
+}
+
+/*    logo  ///// */
+
+/*  /////////// button  ////////////  */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: var(--buttonColor);
+  margin-top: 0.7rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  background-color: var(--highlight);
+  font-weight: 900;
+  padding: 0.8rem 1.6rem;
+}
+
+.button:hover {
+  border: none;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.button-content:hover {
+  background-color: var(--midtone);
+}
+
+.button-hero {
+  margin-top: 1rem;
+}
+
+/*  /////////// button  ////////////  */
+
+/*  /////////// side  ////////////  */
+
+.side {
+  background-color: var(--footer);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  /////////// side  ////////////  */
+
+/*    hero      */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to top right, #0a1222 60%, #0a1222), url("3.jpg");
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__content {
+  width: 70%;
+  margin-top: -10rem;
+
+  padding: 1rem;
+}
+
+.hero__header {
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  font-size: 2.7rem;
+}
+.hero__text {
+  opacity: 0.5;
+  margin-top: -1rem;
+  font-weight: 200;
+}
+
+/*    hero      */
+
+/*    main      */
+
+.main {
+  height: 200vh;
+  width: 80%;
+  position: absolute;
+  right: 0;
+}
+
+/*    hero      */
+
+/*    nav      */
+
+.nav-containter {
+  width: 70%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  color: white;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav-item {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+.nav-item::after {
+  content: "";
+  display: block;
+  height: 0.15rem;
+  width: 100%;
+  background: linear-gradient(to right, var(--footer) 15%, var(--midtone));
+
+  margin-top: 0.5rem;
+}
+
+.navLink {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+/*    nav      */
+
+/*    who are we       */
+.whoWeAre__content {
+  height: 40vh;
+  background-color: var(--shadow);
+  width: 100%;
+  display: flex;
+}
+
+.whoWeAre__content--image {
+  flex: 3;
+  background-image: url("http://lorempixel.com/400/200/");
+  background-size: cover;
+}
+
+.whoWeAre__content--image-one {
+  background-image: url("1.jpg");
+  clip-path: polygon(0 0, 97% 0, 100% 100%, 0% 100%);
+}
+.whoWeAre__content--image-two {
+  background-image: url("2.jpg");
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.whoWeAre__content--image-three {
+  background-image: url("3.jpg");
+  clip-path: polygon(0 0, 97% 0, 100% 100%, 0% 100%);
+}
+
+.whoWeAre__content--text {
+  flex: 5;
+  background-color: var(--shadow);
+  border-bottom: 1px solid var(--midtone);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.whoWeAre__content--header {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+/*    who are we       */
+
+/*   what we do      */
+.whatWeDo {
+  background-color: var(--footer);
+  padding: 10rem;
+}
+
+.whatWeDo__content {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.whatWeDo h3 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.getInTouch {
+  background-color: var(--shadow);
+  padding: 10rem;
+}
+.getInTouch__heading {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.whatWeDo__box {
+  border: 1px solid rgba(255, 255, 255, 0.089);
+}
+
+/*   what we do      */
+
+/*    get in touch   //////*/
+
+.getInTouch__Content {
+  display: flex;
+}
+
+.getInTouch__left {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.301);
+}
+
+.getInTouch__right {
+  flex: 1;
+}
+
+/*    get in touch   //////*/
+
+/*    form     //////*/
+
+.form {
+  width: 300px;
+  background-color: #141e30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.form h3 {
+  text-align: center;
+}
+.form input {
+  width: 100%;
+  border: none;
+  padding: 0.7rem;
+
+  box-sizing: border-box;
+}
+
+.form input:not([type="submit"]) {
+  background: var(--midtone);
+
+  opacity: 0.4;
+}
+
+.form input:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+input[type="submit"] {
+  margin-top: 5px;
+  background-color: var(--highlight);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.form p {
+  margin: 5px;
+}
+
+.form input {
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+  font-size: 0.8rem;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+
+/*    form     //////*/
+
+/*    ///////     contact     */
+
+.getInTouch__right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.getInTouchLi {
+  margin-bottom: 1rem;
+}
+
+.getInTouchLi i {
+  margin-right: 5px;
+  color: var(--highlight);
+  font-size: 1.3rem;
+}
+
+/*    ///////     contact     */
+
+/* ////////    footer    /////// */
+
+.footer {
+  height: 10rem;
+  background-color: var(--footer);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ////////    footer    /////// */
+
+.after {
+  width: 1.5rem;
+  height: 3px;
+  background-color: var(--highlight);
+  display: block;
+  margin-top: 1px;
+}
